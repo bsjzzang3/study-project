@@ -16,8 +16,6 @@ public class OrderApp {
 //		AppConfig appConfig = new AppConfig();
 //		MemberService memberService = appConfig.memberService();
 //		OrderService orderService = appConfig.orderService();
-		// 수정 테스트
-		// 깃 수정 테스트2
 		
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		
