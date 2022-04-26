@@ -1,9 +1,13 @@
 package com.testjun.core.order;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.testjun.core.discount.DiscountPolicy;
 import com.testjun.core.member.Member;
 import com.testjun.core.member.MemberRepository;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
 	
@@ -17,6 +21,7 @@ public class OrderServiceImpl implements OrderService{
 	private final MemberRepository memberRepository;
 	private final DiscountPolicy discountPolicy;
 
+	@Autowired
 	public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
 		super();
 		this.memberRepository = memberRepository;
