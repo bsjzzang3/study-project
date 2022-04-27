@@ -13,14 +13,21 @@ public class OrderServiceImpl implements OrderService{
 	
 	/**
 	 * DIP, OCP 위반
-	 * */
+	 */
 //	private final MemberRepository memberRepository = new MemoryMemberRepository();
 //	private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //	private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 	
+	/**
+	 * 수정자 주입(setter 주입)의 경우
+	 * @Autowired(required = false)로 지정하면 주입할 대상이 없어도 오류가 발생하지 않는다.
+	 */
 	private final MemberRepository memberRepository;
 	private final DiscountPolicy discountPolicy;
 
+	/**
+	 * 생성자 주입 
+	 */
 	@Autowired
 	public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
 		super();
